@@ -1,0 +1,367 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.main 
+{
+    background: linear-gradient(to right, #040006, #62005F);
+    height: 100%;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navlinks{
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: center;
+    margin-right: 111px;
+}
+
+.header
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 40px;
+    max-width: 1080px;
+    width: 84dvw;
+    position: relative;
+    height: fit-content;
+    justify-content: space-between;
+}
+
+/* Logotipas */
+.logo
+{
+    height: fit-content;
+}
+
+/* Navigacija */
+.click
+{
+    max-width: 45%;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    gap: 50px;
+}
+
+.navLink
+{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-family: "Inter", serif;
+    font-weight: 400;
+    font-size: 16px;
+    margin-left: 5px;
+}
+
+/* Hover efektas su pėdutėmis */
+.pawnHidden {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.hoverFeetContainer:hover .pawnHidden {
+    opacity: 1;
+}
+
+.hoverFeetContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Contact mygtukas */
+.contact {
+    position: absolute;
+    right: 0px;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactUs
+{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-family: "Inter", serif;
+    font-weight: 500;
+    font-size: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 18%;
+}
+
+.arrow {
+    margin-left: 10px;
+}
+
+/* HAMBURGER MENU - CSS TRIUKAS */
+.menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    right: 8%;
+    top: 1rem;
+    transform: translateY(-50%);
+}
+
+/* Mobiliesiems įrenginiams */
+@media (max-width: 1010px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .navlinks {
+        margin-right: 0;
+        max-height: 0;
+        overflow: hidden;
+        flex-direction: column;
+        align-items: start;
+        transition: max-height 0.3s ease-in-out, padding-top 0.3s ease-in-out; 
+    }
+
+    .click{
+        flex-direction: column;
+        align-items: start;
+        gap: 0;
+    }
+
+    .hoverFeetContainer{
+        width: fit-content;
+    }
+
+    .header{
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+    }
+
+    .contactUs{
+        margin-left: 21px;
+        padding: 10px;
+    }
+
+    .contact{
+        justify-content: start;
+        position: relative;
+    }
+
+    .navLink {
+        display: block;
+        padding: 10px;
+    }
+
+    /* Checkbox triukas meniu atidarymui */
+    #menu-toggle {
+        display: none;
+    }
+
+    #menu-toggle:checked ~  .navlinks {
+        left: 0;
+        display: block;
+        max-height: 255px;
+        padding-top: 20px;
+    }
+}
+
+.basic
+{
+    display: flex;
+    flex-direction: row;
+    max-width: 1080px;
+    padding-top: 80px;
+    width: 84dvw;
+    justify-items: center;
+    align-items: center;
+}
+
+.text {
+    height: fit-content;
+    max-width: 48%;
+    justify-content: space-between;
+    margin-right: 55px;
+}
+
+.welcome
+{
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "Inter", serif;
+    background: linear-gradient(to right, #FD7452, #FF4265);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    padding-bottom: 30px;
+}
+
+.gradientContainer{
+    font-family: "Inter", serif;
+    font-size: 52px;
+    font-weight: 300;
+    color: #FFFFFF;
+    max-width: 470px;
+    padding-bottom: 25px;
+}
+
+.gradient{
+    font-weight: bold;
+    background: linear-gradient(to right, #FD653D, #FF4167);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.basicText {
+    font-family: "Inter", serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #FFFFFF;
+    max-width: 496px;
+    padding-bottom: 50px;
+}
+
+.button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+}
+
+.service {
+    text-decoration: none;
+    font-family: "Inter", serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #FFFFFF;
+    width: 160px;
+    height: 48px;
+    border-radius: 40px;
+    padding: 0px 40px 0px 40px;
+    background: linear-gradient(to right, #FF5A37, #FF3778);
+    align-content: center;
+}
+
+.schedule {
+    font-family: "Inter", serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+.photo{
+    max-width: 515px;
+}
+
+.block{
+    width: fit-content;
+    position: relative;
+}
+
+.blockContainer {
+    width: 516px;
+    height: 640px;
+    max-height: 640px;
+    border-radius: 240px 240px 0 0;
+    background: linear-gradient(to top, #140119, #5B0E4E);
+    box-shadow: 0px 4px 250px rgba(255, 201, 62, 0.25);
+    position: relative;
+}
+
+.mainDog {
+    position: absolute;
+    bottom: 0px;
+}
+
+.dog1 {
+    position: absolute;
+    bottom: 110px;
+    left: -26px;
+}
+
+.dog2 {
+    position: absolute;
+    bottom: 65.525%;
+    left: 2.718%;
+}
+
+.dog3 {
+    position: absolute;
+    bottom: 90.375%;
+    left: 16.11%;
+}
+
+.dog4 {
+    position: absolute;
+    bottom: 86.7%;
+    right: 20.39%;  
+}
+
+.dog5 {
+    position: absolute;
+    bottom: 79.56%;
+    right: 1.35%;
+}
+
+@media (max-width: 1010px) {
+    .button {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .basic{
+        flex-direction: column;
+    }
+    .photo{
+        margin-top: 100px;
+        max-width: 100%;
+        justify-items: center;
+    }
+    .text{
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 670px) {
+    .photo{
+        width: 100%;
+        max-width: 515px;
+    }
+    .blockContainer{
+        width: 100%;
+        height: 100vw;
+        max-width: 516px;
+    }
+    .mainDog{
+        width: 100%;
+        max-width: 515px;
+    }
+    .block{
+        max-width: 516px;
+        width: 100%;
+    }
+}
+
+
+
+
